@@ -1,6 +1,6 @@
-D:/Programming/DS Library - Containerized/build/CMakeFiles/Vector-Test.dir
 D:/Programming/DS Library - Containerized/build/CMakeFiles/List-Test.dir
 D:/Programming/DS Library - Containerized/build/CMakeFiles/ForwardList-Test.dir
+D:/Programming/DS Library - Containerized/build/CMakeFiles/Vector-Test.dir
 D:/Programming/DS Library - Containerized/build/CMakeFiles/Deque-Test.dir
 D:/Programming/DS Library - Containerized/build/CMakeFiles/Stack-Test.dir
 D:/Programming/DS Library - Containerized/build/CMakeFiles/Queue-Test.dir

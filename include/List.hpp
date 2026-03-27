@@ -48,6 +48,6 @@ public:
     void display() const;
 };
 
-#include "List.cpp"
+#include "../src/List.cpp"
 
 #endif

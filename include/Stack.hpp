@@ -24,7 +24,7 @@ public:
     void display() const;
 };
 
-#include "Stack.cpp"
+#include "../src/Stack.cpp"
 
 
 #endif

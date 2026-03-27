@@ -123,19 +123,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Vector-Test
-
-# Build rule for target.
-Vector-Test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Vector-Test
-.PHONY : Vector-Test
-
-# fast build rule for target.
-Vector-Test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector-Test.dir\build.make CMakeFiles/Vector-Test.dir/build
-.PHONY : Vector-Test/fast
-
-#=============================================================================
 # Target rules for targets named List-Test
 
 # Build rule for target.
@@ -160,6 +147,19 @@ ForwardList-Test: cmake_check_build_system
 ForwardList-Test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ForwardList-Test.dir\build.make CMakeFiles/ForwardList-Test.dir/build
 .PHONY : ForwardList-Test/fast
+
+#=============================================================================
+# Target rules for targets named Vector-Test
+
+# Build rule for target.
+Vector-Test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Vector-Test
+.PHONY : Vector-Test
+
+# fast build rule for target.
+Vector-Test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector-Test.dir\build.make CMakeFiles/Vector-Test.dir/build
+.PHONY : Vector-Test/fast
 
 #=============================================================================
 # Target rules for targets named Deque-Test

@@ -40,6 +40,6 @@ public:
     void display() const;
 };
 
-#include "Deque.cpp"
+#include "../src/Deque.cpp"
 
 #endif

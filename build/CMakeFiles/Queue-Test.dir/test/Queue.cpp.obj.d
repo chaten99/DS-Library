@@ -101,4 +101,7 @@ CMakeFiles/Queue-Test.dir/test/Queue.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc \
  D:/PROGRA~1/DSLIBR~2/include/Queue.hpp \
- D:/PROGRA~1/DSLIBR~2/include/Deque.hpp
+ D:/PROGRA~1/DSLIBR~2/include/Deque.hpp \
+ d:\progra~1\dslibr~2\src\deque.cpp \
+ D:/PROGRA~1/DSLIBR~2/include/Deque.hpp \
+ d:\progra~1\dslibr~2\src\queue.cpp

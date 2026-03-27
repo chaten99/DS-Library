@@ -1,5 +1,5 @@
-CMakeFiles/Stack-Test.dir/test/Stack.cpp.obj: \
- D:\Programming\DS\ Library\ -\ Containerized\test\Stack.cpp \
+CMakeFiles/ForwardList-Test.dir/test/ForwardList.cpp.obj: \
+ D:\Programming\DS\ Library\ -\ Containerized\test\ForwardList.cpp \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\c++config.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\os_defines.h \
@@ -100,8 +100,5 @@ CMakeFiles/Stack-Test.dir/test/Stack.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ostream.tcc \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc \
- D:/PROGRA~1/DSLIBR~2/include/Stack.hpp \
- D:/PROGRA~1/DSLIBR~2/include/Deque.hpp \
- d:\progra~1\dslibr~2\src\deque.cpp \
- D:/PROGRA~1/DSLIBR~2/include/Deque.hpp \
- d:\progra~1\dslibr~2\src\stack.cpp
+ D:/PROGRA~1/DSLIBR~2/include/ForwardList.hpp \
+ d:\progra~1\dslibr~2\src\forwardlist.cpp

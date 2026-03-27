@@ -31,6 +31,6 @@ public:
     void display() const;
 };
 
-#include "Vector.cpp"
+#include "../src/Vector.cpp"
 
 #endif

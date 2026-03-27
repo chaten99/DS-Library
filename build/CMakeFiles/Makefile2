@@ -62,18 +62,18 @@ CMAKE_BINARY_DIR = "D:\Programming\DS Library - Containerized\build"
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Vector-Test.dir/all
 all: CMakeFiles/List-Test.dir/all
 all: CMakeFiles/ForwardList-Test.dir/all
+all: CMakeFiles/Vector-Test.dir/all
 all: CMakeFiles/Deque-Test.dir/all
 all: CMakeFiles/Stack-Test.dir/all
 all: CMakeFiles/Queue-Test.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/Vector-Test.dir/codegen
 codegen: CMakeFiles/List-Test.dir/codegen
 codegen: CMakeFiles/ForwardList-Test.dir/codegen
+codegen: CMakeFiles/Vector-Test.dir/codegen
 codegen: CMakeFiles/Deque-Test.dir/codegen
 codegen: CMakeFiles/Stack-Test.dir/codegen
 codegen: CMakeFiles/Queue-Test.dir/codegen
@@ -84,45 +84,13 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Vector-Test.dir/clean
 clean: CMakeFiles/List-Test.dir/clean
 clean: CMakeFiles/ForwardList-Test.dir/clean
+clean: CMakeFiles/Vector-Test.dir/clean
 clean: CMakeFiles/Deque-Test.dir/clean
 clean: CMakeFiles/Stack-Test.dir/clean
 clean: CMakeFiles/Queue-Test.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/Vector-Test.dir
-
-# All Build rule for target.
-CMakeFiles/Vector-Test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector-Test.dir\build.make CMakeFiles/Vector-Test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector-Test.dir\build.make CMakeFiles/Vector-Test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Programming\DS Library - Containerized\build\CMakeFiles" --progress-num=11,12 "Built target Vector-Test"
-.PHONY : CMakeFiles/Vector-Test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Vector-Test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programming\DS Library - Containerized\build\CMakeFiles" 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Vector-Test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programming\DS Library - Containerized\build\CMakeFiles" 0
-.PHONY : CMakeFiles/Vector-Test.dir/rule
-
-# Convenience name for target.
-Vector-Test: CMakeFiles/Vector-Test.dir/rule
-.PHONY : Vector-Test
-
-# codegen rule for target.
-CMakeFiles/Vector-Test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector-Test.dir\build.make CMakeFiles/Vector-Test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Programming\DS Library - Containerized\build\CMakeFiles" --progress-num=11,12 "Finished codegen for target Vector-Test"
-.PHONY : CMakeFiles/Vector-Test.dir/codegen
-
-# clean rule for target.
-CMakeFiles/Vector-Test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector-Test.dir\build.make CMakeFiles/Vector-Test.dir/clean
-.PHONY : CMakeFiles/Vector-Test.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/List-Test.dir
@@ -187,6 +155,38 @@ CMakeFiles/ForwardList-Test.dir/codegen:
 CMakeFiles/ForwardList-Test.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ForwardList-Test.dir\build.make CMakeFiles/ForwardList-Test.dir/clean
 .PHONY : CMakeFiles/ForwardList-Test.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Vector-Test.dir
+
+# All Build rule for target.
+CMakeFiles/Vector-Test.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector-Test.dir\build.make CMakeFiles/Vector-Test.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector-Test.dir\build.make CMakeFiles/Vector-Test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Programming\DS Library - Containerized\build\CMakeFiles" --progress-num=11,12 "Built target Vector-Test"
+.PHONY : CMakeFiles/Vector-Test.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Vector-Test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programming\DS Library - Containerized\build\CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Vector-Test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programming\DS Library - Containerized\build\CMakeFiles" 0
+.PHONY : CMakeFiles/Vector-Test.dir/rule
+
+# Convenience name for target.
+Vector-Test: CMakeFiles/Vector-Test.dir/rule
+.PHONY : Vector-Test
+
+# codegen rule for target.
+CMakeFiles/Vector-Test.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector-Test.dir\build.make CMakeFiles/Vector-Test.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Programming\DS Library - Containerized\build\CMakeFiles" --progress-num=11,12 "Finished codegen for target Vector-Test"
+.PHONY : CMakeFiles/Vector-Test.dir/codegen
+
+# clean rule for target.
+CMakeFiles/Vector-Test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector-Test.dir\build.make CMakeFiles/Vector-Test.dir/clean
+.PHONY : CMakeFiles/Vector-Test.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Deque-Test.dir
