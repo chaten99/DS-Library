@@ -4,7 +4,7 @@
 # compile CXX with C:/MinGW/bin/c++.exe
 CXX_DEFINES = 
 
-CXX_INCLUDES = @CMakeFiles/Main.dir/includes_CXX.rsp
+CXX_INCLUDES = @CMakeFiles/Tree-Test.dir/includes_CXX.rsp
 
 CXX_FLAGS = -std=gnu++1z
 

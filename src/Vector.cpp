@@ -92,3 +92,23 @@ void Vector<T>::display() const {
     }
     std::cout << "\n";
 }
+
+template <typename T>
+typename Vector<T>::iterator Vector<T>::begin() {
+    return iterator(arr);
+}
+
+template <typename T>
+typename Vector<T>::iterator Vector<T>::end() {
+    return iterator(arr + currentSize);
+}
+
+template <typename T>
+typename Vector<T>::const_iterator Vector<T>::begin() const {
+    return const_iterator(arr);
+}
+
+template <typename T>
+typename Vector<T>::const_iterator Vector<T>::end() const {
+    return const_iterator(arr + currentSize);
+}

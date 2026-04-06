@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdexcept>
 #include <initializer_list>
-#include "List.hpp"
 
 
 template <typename T>
@@ -165,4 +164,14 @@ void List<T>::display() const {
         temp = temp->next;
     }
     std::cout << "NULL\n";
+}
+
+template <typename T>
+typename List<T>::iterator List<T>::begin() {
+    return iterator(head);
+}
+
+template <typename T>
+typename List<T>::iterator List<T>::end() {
+    return iterator(nullptr);
 }

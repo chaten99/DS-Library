@@ -5,10 +5,9 @@
 #include <stdexcept>
 #include <initializer_list>
 
-
 template <typename T>
 class List {
-private:
+public:
     struct Node {
         T data;
         Node* prev;
@@ -17,6 +16,7 @@ private:
         Node(T val) : data(val), prev(nullptr), next(nullptr) {}
     };
 
+private:
     Node* head;
     Node* tail;
     size_t length;
@@ -24,6 +24,55 @@ private:
     void copyFrom(const List& other);
 
 public:
+    class iterator {
+    private:
+        Node* current;
+
+    public:
+        iterator() : current(nullptr) {}
+        explicit iterator(Node* node) : current(node) {}
+
+        T& operator*() const {
+            return current->data;
+        }
+
+        T* operator->() const {
+            return &(current->data);
+        }
+
+        iterator& operator++() {
+            if (current) current = current->next;
+            return *this;
+        }
+
+        iterator operator++(int) {
+            iterator tmp = *this;
+            if (current) current = current->next;
+            return tmp;
+        }
+
+        iterator& operator--() {
+            if (current) current = current->prev;
+            return *this;
+        }
+
+        iterator operator--(int) {
+            iterator tmp = *this;
+            if (current) current = current->prev;
+            return tmp;
+        }
+
+        bool operator==(const iterator& other) const {
+            return current == other.current;
+        }
+
+        bool operator!=(const iterator& other) const {
+            return current != other.current;
+        }
+
+        friend class List<T>;
+    };
+
     List();
     ~List();
 
@@ -43,6 +92,9 @@ public:
 
     bool empty() const;
     size_t size() const;
+
+    iterator begin();
+    iterator end();
 
     void clear();
     void display() const;

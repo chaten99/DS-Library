@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdexcept>
 #include <initializer_list>
-#include "ForwardList.hpp"
 
 template <typename T>
 ForwardList<T>::ForwardList() {
@@ -109,4 +108,14 @@ void ForwardList<T>::display() const {
         temp = temp->next;
     }
     std::cout << "NULL\n";
+}
+
+template <typename T>
+typename ForwardList<T>::iterator ForwardList<T>::begin() {
+    return iterator(head);
+}
+
+template <typename T>
+typename ForwardList<T>::iterator ForwardList<T>::end() {
+    return iterator(nullptr);
 }

@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\Programming\DS Library - Containerized"
+CMAKE_SOURCE_DIR = "E:\Programming\DS Library - Containerized"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\Programming\DS Library - Containerized\build"
+CMAKE_BINARY_DIR = "E:\Programming\DS Library - Containerized\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,16 +86,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programming\DS Library - Containerized\build\CMakeFiles" "D:\Programming\DS Library - Containerized\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\Programming\DS Library - Containerized\build\CMakeFiles" "E:\Programming\DS Library - Containerized\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programming\DS Library - Containerized\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\Programming\DS Library - Containerized\build\CMakeFiles" 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programming\DS Library - Containerized\build\CMakeFiles" "D:\Programming\DS Library - Containerized\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\Programming\DS Library - Containerized\build\CMakeFiles" "E:\Programming\DS Library - Containerized\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programming\DS Library - Containerized\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\Programming\DS Library - Containerized\build\CMakeFiles" 0
 .PHONY : codegen
 
 # The main clean target
@@ -199,6 +199,19 @@ Queue-Test: cmake_check_build_system
 Queue-Test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Queue-Test.dir\build.make CMakeFiles/Queue-Test.dir/build
 .PHONY : Queue-Test/fast
+
+#=============================================================================
+# Target rules for targets named Tree-Test
+
+# Build rule for target.
+Tree-Test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Tree-Test
+.PHONY : Tree-Test
+
+# fast build rule for target.
+Tree-Test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tree-Test.dir\build.make CMakeFiles/Tree-Test.dir/build
+.PHONY : Tree-Test/fast
 
 test/Deque.obj: test/Deque.cpp.obj
 .PHONY : test/Deque.obj
@@ -320,6 +333,30 @@ test/Stack.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stack-Test.dir\build.make CMakeFiles/Stack-Test.dir/test/Stack.cpp.s
 .PHONY : test/Stack.cpp.s
 
+test/Tree.obj: test/Tree.cpp.obj
+.PHONY : test/Tree.obj
+
+# target to build an object file
+test/Tree.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tree-Test.dir\build.make CMakeFiles/Tree-Test.dir/test/Tree.cpp.obj
+.PHONY : test/Tree.cpp.obj
+
+test/Tree.i: test/Tree.cpp.i
+.PHONY : test/Tree.i
+
+# target to preprocess a source file
+test/Tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tree-Test.dir\build.make CMakeFiles/Tree-Test.dir/test/Tree.cpp.i
+.PHONY : test/Tree.cpp.i
+
+test/Tree.s: test/Tree.cpp.s
+.PHONY : test/Tree.s
+
+# target to generate assembly for a file
+test/Tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tree-Test.dir\build.make CMakeFiles/Tree-Test.dir/test/Tree.cpp.s
+.PHONY : test/Tree.cpp.s
+
 test/Vector.obj: test/Vector.cpp.obj
 .PHONY : test/Vector.obj
 
@@ -358,6 +395,7 @@ help:
 	@echo ... List-Test
 	@echo ... Queue-Test
 	@echo ... Stack-Test
+	@echo ... Tree-Test
 	@echo ... Vector-Test
 	@echo ... test/Deque.obj
 	@echo ... test/Deque.i
@@ -374,6 +412,9 @@ help:
 	@echo ... test/Stack.obj
 	@echo ... test/Stack.i
 	@echo ... test/Stack.s
+	@echo ... test/Tree.obj
+	@echo ... test/Tree.i
+	@echo ... test/Tree.s
 	@echo ... test/Vector.obj
 	@echo ... test/Vector.i
 	@echo ... test/Vector.s
