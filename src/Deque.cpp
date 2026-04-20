@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdexcept>
+#include "Deque.hpp"
 
 template <typename T>
 Deque<T>::Deque() {

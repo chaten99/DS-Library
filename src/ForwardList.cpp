@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <initializer_list>
+#include "ForwardList.hpp"
 
 template <typename T>
 ForwardList<T>::ForwardList() {
