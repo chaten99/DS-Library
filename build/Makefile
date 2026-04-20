@@ -213,6 +213,19 @@ Tree-Test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tree-Test.dir\build.make CMakeFiles/Tree-Test.dir/build
 .PHONY : Tree-Test/fast
 
+#=============================================================================
+# Target rules for targets named PriorityQueue-Test
+
+# Build rule for target.
+PriorityQueue-Test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 PriorityQueue-Test
+.PHONY : PriorityQueue-Test
+
+# fast build rule for target.
+PriorityQueue-Test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PriorityQueue-Test.dir\build.make CMakeFiles/PriorityQueue-Test.dir/build
+.PHONY : PriorityQueue-Test/fast
+
 test/Deque.obj: test/Deque.cpp.obj
 .PHONY : test/Deque.obj
 
@@ -284,6 +297,30 @@ test/List.s: test/List.cpp.s
 test/List.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\List-Test.dir\build.make CMakeFiles/List-Test.dir/test/List.cpp.s
 .PHONY : test/List.cpp.s
+
+test/PriorityQueue.obj: test/PriorityQueue.cpp.obj
+.PHONY : test/PriorityQueue.obj
+
+# target to build an object file
+test/PriorityQueue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PriorityQueue-Test.dir\build.make CMakeFiles/PriorityQueue-Test.dir/test/PriorityQueue.cpp.obj
+.PHONY : test/PriorityQueue.cpp.obj
+
+test/PriorityQueue.i: test/PriorityQueue.cpp.i
+.PHONY : test/PriorityQueue.i
+
+# target to preprocess a source file
+test/PriorityQueue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PriorityQueue-Test.dir\build.make CMakeFiles/PriorityQueue-Test.dir/test/PriorityQueue.cpp.i
+.PHONY : test/PriorityQueue.cpp.i
+
+test/PriorityQueue.s: test/PriorityQueue.cpp.s
+.PHONY : test/PriorityQueue.s
+
+# target to generate assembly for a file
+test/PriorityQueue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PriorityQueue-Test.dir\build.make CMakeFiles/PriorityQueue-Test.dir/test/PriorityQueue.cpp.s
+.PHONY : test/PriorityQueue.cpp.s
 
 test/Queue.obj: test/Queue.cpp.obj
 .PHONY : test/Queue.obj
@@ -393,6 +430,7 @@ help:
 	@echo ... Deque-Test
 	@echo ... ForwardList-Test
 	@echo ... List-Test
+	@echo ... PriorityQueue-Test
 	@echo ... Queue-Test
 	@echo ... Stack-Test
 	@echo ... Tree-Test
@@ -406,6 +444,9 @@ help:
 	@echo ... test/List.obj
 	@echo ... test/List.i
 	@echo ... test/List.s
+	@echo ... test/PriorityQueue.obj
+	@echo ... test/PriorityQueue.i
+	@echo ... test/PriorityQueue.s
 	@echo ... test/Queue.obj
 	@echo ... test/Queue.i
 	@echo ... test/Queue.s

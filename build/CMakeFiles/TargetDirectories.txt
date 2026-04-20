@@ -5,5 +5,6 @@ E:/Programming/DS Library - Containerized/build/CMakeFiles/Deque-Test.dir
 E:/Programming/DS Library - Containerized/build/CMakeFiles/Stack-Test.dir
 E:/Programming/DS Library - Containerized/build/CMakeFiles/Queue-Test.dir
 E:/Programming/DS Library - Containerized/build/CMakeFiles/Tree-Test.dir
+E:/Programming/DS Library - Containerized/build/CMakeFiles/PriorityQueue-Test.dir
 E:/Programming/DS Library - Containerized/build/CMakeFiles/edit_cache.dir
 E:/Programming/DS Library - Containerized/build/CMakeFiles/rebuild_cache.dir
