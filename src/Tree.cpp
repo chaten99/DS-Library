@@ -262,14 +262,4 @@ size_t Tree<T>::size() const {
     return nodeCount;
 }
 
-template <typename T>
-typename Tree<T>::iterator Tree<T>::begin() {
-    std::vector<T> elements = inOrderTraversal();
-    return iterator(elements, true);
-}
 
-template <typename T>
-typename Tree<T>::iterator Tree<T>::end() {
-    std::vector<T> elements = inOrderTraversal();
-    return iterator(elements, false);
-}

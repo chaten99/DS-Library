@@ -32,23 +32,7 @@ void testTree() {
     cout << "Search 100: " << (tree.search(100) ? "Found" : "Not Found") << "\n";
     cout << "Contains 70: " << (tree.contains(70) ? "Yes" : "No") << "\n\n";
 
-    cout << "--- Test 4: Using STL-style Iterator ---\n";
-    cout << "Range-based for (in-order): ";
-    for (int x : tree) {
-        cout << x << " ";
-    }
-    cout << "\n";
-
-    cout << "Manual iterator: ";
-    auto it = tree.begin();
-    auto end = tree.end();
-    while (it != end) {
-        cout << *it << " ";
-        ++it;
-    }
-    cout << "\n\n";
-
-    cout << "--- Test 5: Deleting Elements ---\n";
+    cout << "--- Test 4: Deleting Elements ---\n";
     cout << "Deleting 20 (leaf node)\n";
     tree.remove(20);
     tree.displayInOrder();
@@ -62,7 +46,7 @@ void testTree() {
     tree.displayInOrder();
     cout << "Tree size after deletions: " << tree.size() << "\n\n";
 
-    cout << "--- Test 6: String Tree ---\n";
+    cout << "--- Test 5: String Tree ---\n";
     Tree<string> strTree;
     strTree.insert("dog");
     strTree.insert("cat");
@@ -75,7 +59,7 @@ void testTree() {
     strTree.displayPreOrder();
     cout << "Search 'cat': " << (strTree.search("cat") ? "Found" : "Not Found") << "\n\n";
 
-    cout << "--- Test 7: Empty Tree Check ---\n";
+    cout << "--- Test 6: Empty Tree Check ---\n";
     Tree<int> emptyTree;
     cout << "Empty tree status: " << (emptyTree.isEmpty() ? "Empty" : "Not Empty") << "\n";
     cout << "Empty tree size: " << emptyTree.size() << "\n";

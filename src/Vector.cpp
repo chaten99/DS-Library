@@ -17,6 +17,37 @@ Vector<T>::~Vector() {
 }
 
 template <typename T>
+Vector<T>::Vector(const Vector& other) {
+    currentSize = other.currentSize;
+    currentCapacity = other.currentCapacity;
+
+    arr = new T[currentCapacity];
+
+    for (size_t i = 0; i < currentSize; i++) {
+        arr[i] = other.arr[i];
+    }
+}
+
+template <typename T>
+Vector<T>& Vector<T>::operator=(const Vector& other) {
+    if (this != &other) {
+
+        delete[] arr;
+
+        currentSize = other.currentSize;
+        currentCapacity = other.currentCapacity;
+
+        arr = new T[currentCapacity];
+
+        for (size_t i = 0; i < currentSize; i++) {
+            arr[i] = other.arr[i];
+        }
+    }
+
+    return *this;
+}
+
+template <typename T>
 Vector<T>::Vector(std::initializer_list<T> init) {
     currentSize = init.size();
     currentCapacity = currentSize > 0 ? currentSize : 1;
@@ -49,6 +80,36 @@ void Vector<T>::pushBack(T val) {
 template <typename T>
 void Vector<T>::popBack() {
     if (currentSize == 0) throw std::runtime_error("Vector is empty");
+    currentSize--;
+}
+
+template <typename T>
+void Vector<T>::insert(size_t index, T val) {
+
+    if (index > currentSize)
+        throw std::out_of_range("Index out of range");
+
+    if (currentSize == currentCapacity)
+        resize();
+
+    for (size_t i = currentSize; i > index; i--) {
+        arr[i] = arr[i - 1];
+    }
+
+    arr[index] = val;
+    currentSize++;
+}
+
+template <typename T>
+void Vector<T>::remove(size_t index) {
+
+    if (index >= currentSize)
+        throw std::out_of_range("Index out of range");
+
+    for (size_t i = index; i < currentSize - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+
     currentSize--;
 }
 
@@ -86,6 +147,11 @@ size_t Vector<T>::size() const {
 }
 
 template <typename T>
+size_t Vector<T>::capacity() const {
+    return currentCapacity;
+}
+
+template <typename T>
 void Vector<T>::display() const {
     for (size_t i = 0; i < currentSize; i++) {
         std::cout << arr[i] << " ";
@@ -93,22 +159,4 @@ void Vector<T>::display() const {
     std::cout << "\n";
 }
 
-template <typename T>
-typename Vector<T>::iterator Vector<T>::begin() {
-    return iterator(arr);
-}
 
-template <typename T>
-typename Vector<T>::iterator Vector<T>::end() {
-    return iterator(arr + currentSize);
-}
-
-template <typename T>
-typename Vector<T>::const_iterator Vector<T>::begin() const {
-    return const_iterator(arr);
-}
-
-template <typename T>
-typename Vector<T>::const_iterator Vector<T>::end() const {
-    return const_iterator(arr + currentSize);
-}

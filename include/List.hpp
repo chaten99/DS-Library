@@ -24,55 +24,6 @@ private:
     void copyFrom(const List& other);
 
 public:
-    class iterator {
-    private:
-        Node* current;
-
-    public:
-        iterator() : current(nullptr) {}
-        explicit iterator(Node* node) : current(node) {}
-
-        T& operator*() const {
-            return current->data;
-        }
-
-        T* operator->() const {
-            return &(current->data);
-        }
-
-        iterator& operator++() {
-            if (current) current = current->next;
-            return *this;
-        }
-
-        iterator operator++(int) {
-            iterator tmp = *this;
-            if (current) current = current->next;
-            return tmp;
-        }
-
-        iterator& operator--() {
-            if (current) current = current->prev;
-            return *this;
-        }
-
-        iterator operator--(int) {
-            iterator tmp = *this;
-            if (current) current = current->prev;
-            return tmp;
-        }
-
-        bool operator==(const iterator& other) const {
-            return current == other.current;
-        }
-
-        bool operator!=(const iterator& other) const {
-            return current != other.current;
-        }
-
-        friend class List<T>;
-    };
-
     List();
     ~List();
 
@@ -82,6 +33,7 @@ public:
 
     void pushFront(T val);
     void pushBack(T val);
+    void insert(size_t index, T val);
 
     void popFront();
     void popBack();
@@ -90,11 +42,10 @@ public:
     T& back();
     T& at(size_t index);
 
+    bool search(T val) const;
+
     bool empty() const;
     size_t size() const;
-
-    iterator begin();
-    iterator end();
 
     void clear();
     void display() const;

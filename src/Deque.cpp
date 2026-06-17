@@ -178,13 +178,4 @@ void Deque<T>::display() const {
     }
     std::cout << "\n";
 }
-
-template <typename T>
-typename Deque<T>::iterator Deque<T>::begin() {
-    return iterator(this, 0);
-}
-
-template <typename T>
-typename Deque<T>::iterator Deque<T>::end() {
-    return iterator(this, size());
-}
+

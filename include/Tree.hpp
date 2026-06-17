@@ -7,74 +7,6 @@
 #include <functional>
 
 template <typename T>
-class Tree;
-
-template <typename T>
-class TreeIterator {
-public:
-    using value_type = T;
-
-private:
-    std::vector<T> elements;
-    typename std::vector<T>::iterator current;
-
-public:
-    TreeIterator() : current(elements.end()) {}
-    explicit TreeIterator(const std::vector<T>& elem, bool isBegin = true)
-        : elements(elem) {
-        current = isBegin ? elements.begin() : elements.end();
-    }
-
-    T& operator*() {
-        return *current;
-    }
-
-    const T& operator*() const {
-        return *current;
-    }
-
-    T* operator->() {
-        return &(*current);
-    }
-
-    const T* operator->() const {
-        return &(*current);
-    }
-
-    TreeIterator& operator++() {
-        ++current;
-        return *this;
-    }
-
-    TreeIterator operator++(int) {
-        TreeIterator tmp = *this;
-        ++current;
-        return tmp;
-    }
-
-    TreeIterator& operator--() {
-        --current;
-        return *this;
-    }
-
-    TreeIterator operator--(int) {
-        TreeIterator tmp = *this;
-        --current;
-        return tmp;
-    }
-
-    bool operator==(const TreeIterator& other) const {
-        return current == other.current;
-    }
-
-    bool operator!=(const TreeIterator& other) const {
-        return current != other.current;
-    }
-
-    friend class Tree<T>;
-};
-
-template <typename T>
 class Tree {
 private:
     struct Node {
@@ -98,8 +30,6 @@ private:
     Node* search(Node* node, T val) const;
 
 public:
-    using iterator = TreeIterator<T>;
-
     Tree();
     ~Tree();
 
@@ -122,11 +52,6 @@ public:
 
     bool isEmpty() const;
     size_t size() const;
-
-    iterator begin();
-    iterator end();
-
-    friend class TreeIterator<T>;
 };
 
 #include "../src/Tree.cpp"

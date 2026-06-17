@@ -83,6 +83,39 @@ void List<T>::pushBack(T val) {
 }
 
 template <typename T>
+void List<T>::insert(size_t index, T val) {
+
+    if (index > length)
+        throw std::out_of_range("Index out of range");
+
+    if (index == 0) {
+        pushFront(val);
+        return;
+    }
+
+    if (index == length) {
+        pushBack(val);
+        return;
+    }
+
+    Node* temp = head;
+
+    for (size_t i = 0; i < index; i++) {
+        temp = temp->next;
+    }
+
+    Node* newNode = new Node(val);
+
+    newNode->prev = temp->prev;
+    newNode->next = temp;
+
+    temp->prev->next = newNode;
+    temp->prev = newNode;
+
+    length++;
+}
+
+template <typename T>
 void List<T>::popFront() {
     if (!head) throw std::runtime_error("List is empty");
 
@@ -135,6 +168,21 @@ T& List<T>::at(size_t index) {
 }
 
 template <typename T>
+bool List<T>::search(T val) const {
+    Node* temp = head;
+
+    while (temp) {
+
+        if (temp->data == val)
+            return true;
+
+        temp = temp->next;
+    }
+
+    return false;
+}
+
+template <typename T>
 bool List<T>::empty() const {
     return length == 0;
 }
@@ -166,12 +214,4 @@ void List<T>::display() const {
     std::cout << "NULL\n";
 }
 
-template <typename T>
-typename List<T>::iterator List<T>::begin() {
-    return iterator(head);
-}
 
-template <typename T>
-typename List<T>::iterator List<T>::end() {
-    return iterator(nullptr);
-}

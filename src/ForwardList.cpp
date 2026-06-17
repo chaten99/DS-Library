@@ -76,6 +76,31 @@ void ForwardList<T>::popFront() {
 }
 
 template <typename T>
+void ForwardList<T>::insert(size_t index, T val) {
+
+    if (index > length)
+        throw std::out_of_range("Index out of range");
+
+    if (index == 0) {
+        pushFront(val);
+        return;
+    }
+
+    Node* temp = head;
+
+    for (size_t i = 0; i < index - 1; i++) {
+        temp = temp->next;
+    }
+
+    Node* newNode = new Node(val);
+
+    newNode->next = temp->next;
+    temp->next = newNode;
+
+    length++;
+}
+
+template <typename T>
 T& ForwardList<T>::front() {
     if (!head) throw std::runtime_error("ForwardList is empty");
     return head->data;
@@ -89,6 +114,22 @@ bool ForwardList<T>::empty() const {
 template <typename T>
 size_t ForwardList<T>::size() const {
     return length;
+}
+
+template <typename T>
+bool ForwardList<T>::search(T val) const {
+
+    Node* temp = head;
+
+    while (temp) {
+
+        if (temp->data == val)
+            return true;
+
+        temp = temp->next;
+    }
+
+    return false;
 }
 
 template <typename T>
@@ -111,12 +152,4 @@ void ForwardList<T>::display() const {
     std::cout << "NULL\n";
 }
 
-template <typename T>
-typename ForwardList<T>::iterator ForwardList<T>::begin() {
-    return iterator(head);
-}
 
-template <typename T>
-typename ForwardList<T>::iterator ForwardList<T>::end() {
-    return iterator(nullptr);
-}

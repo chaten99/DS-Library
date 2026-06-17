@@ -5,63 +5,6 @@
 #include <stdexcept>
 
 template <typename T>
-class Deque;
-
-template <typename T>
-class DequeIterator {
-public:
-    using value_type = T;
-
-private:
-    Deque<T>* deque;
-    size_t index;
-
-public:
-    DequeIterator() : deque(nullptr), index(0) {}
-    DequeIterator(Deque<T>* d, size_t i) : deque(d), index(i) {}
-
-    T& operator*() const {
-        return (*deque)[index];
-    }
-
-    T* operator->() const {
-        return &((*deque)[index]);
-    }
-
-    DequeIterator& operator++() {
-        ++index;
-        return *this;
-    }
-
-    DequeIterator operator++(int) {
-        DequeIterator tmp = *this;
-        ++index;
-        return tmp;
-    }
-
-    DequeIterator& operator--() {
-        --index;
-        return *this;
-    }
-
-    DequeIterator operator--(int) {
-        DequeIterator tmp = *this;
-        --index;
-        return tmp;
-    }
-
-    bool operator==(const DequeIterator& other) const {
-        return deque == other.deque && index == other.index;
-    }
-
-    bool operator!=(const DequeIterator& other) const {
-        return !(*this == other);
-    }
-
-    friend class Deque<T>;
-};
-
-template <typename T>
 class Deque {
 private:
     T** map;
@@ -79,8 +22,6 @@ private:
     void reallocateMap();
 
 public:
-    using iterator = DequeIterator<T>;
-
     Deque();
     ~Deque();
 
@@ -99,12 +40,7 @@ public:
     bool empty() const;
     size_t size() const;
 
-    iterator begin();
-    iterator end();
-
     void display() const;
-
-    friend class DequeIterator<T>;
 };
 
 #include "../src/Deque.cpp"

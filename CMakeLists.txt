@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.3)
+cmake_minimum_required(VERSION 3.20)
 project(DSLibrary)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -14,3 +14,5 @@ add_executable(Stack-Test test/Stack.cpp)
 add_executable(Queue-Test test/Queue.cpp)
 add_executable(Tree-Test test/Tree.cpp)
 add_executable(PriorityQueue-Test test/PriorityQueue.cpp)
+add_executable(HashMap-Test test/HashMap.cpp)
+add_executable(RedisCLI-Test test/RedisCLI.cpp)

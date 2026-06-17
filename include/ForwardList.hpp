@@ -22,44 +22,6 @@ private:
     void copyFrom(const ForwardList& other);
 
 public:
-    class iterator {
-    private:
-        Node* current;
-
-    public:
-        iterator() : current(nullptr) {}
-        explicit iterator(Node* node) : current(node) {}
-
-        T& operator*() const {
-            return current->data;
-        }
-
-        T* operator->() const {
-            return &(current->data);
-        }
-
-        iterator& operator++() {
-            if (current) current = current->next;
-            return *this;
-        }
-
-        iterator operator++(int) {
-            iterator tmp = *this;
-            if (current) current = current->next;
-            return tmp;
-        }
-
-        bool operator==(const iterator& other) const {
-            return current == other.current;
-        }
-
-        bool operator!=(const iterator& other) const {
-            return current != other.current;
-        }
-
-        friend class ForwardList<T>;
-    };
-
     ForwardList();
     ~ForwardList();
 
@@ -69,14 +31,14 @@ public:
 
     void pushFront(T val);
     void popFront();
+    void insert(size_t index, T val);
 
     T& front();
 
     bool empty() const;
     size_t size() const;
 
-    iterator begin();
-    iterator end();
+    bool search(T val) const;
 
     void clear();
     void display() const;
